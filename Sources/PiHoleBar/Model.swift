@@ -16,6 +16,15 @@ final class Model: ObservableObject {
     private let client = PiHoleClient()
     private var timer: Timer?
     private var generation = 0
+    var isPreview = false
+
+    /// Fixed-state model for screenshots: no network, no Keychain, no timer.
+    init(preview: Status) {
+        host = "pihole.local"
+        password = "x"
+        status = preview
+        isPreview = true
+    }
 
     init() {
         host = UserDefaults.standard.string(forKey: "host") ?? "pihole.local"
