@@ -23,6 +23,14 @@ A tiny macOS menu bar app for [Pi-hole](https://pi-hole.net) v6. See at a glance
 
 Requires macOS 13+ and Pi-hole **v6** (it uses the v6 REST API).
 
+## Install
+
+```bash
+brew install --cask Griff2325/tap/pihole-bar
+```
+
+Or download `PiHoleBar-1.0.0.zip` from [Releases](https://github.com/Griff2325/pihole-menubar/releases), unzip, and right-click `PiHoleBar.app` > **Open** the first time (the app is not notarized).
+
 ## Build and run
 
 Needs Xcode or the command line tools (`xcode-select --install`).
@@ -46,3 +54,11 @@ To start it at login, drag `PiHoleBar.app` to Applications, then add it under Sy
 - Pi-hole API sessions count against a small limit; the app reuses one session and re-logs in when it expires.
 
 MIT licensed.
+
+## For AI agents and automation
+
+- What it is: a SwiftUI `MenuBarExtra` app (macOS 13+, Swift 5.9, no dependencies) for Pi-hole v6.
+- Install: `brew install --cask Griff2325/tap/pihole-bar`. Build from source: `./build.sh`, output `PiHoleBar.app`.
+- Config: address in `UserDefaults` (`host`), admin password in Keychain (service `PiHoleBar`).
+- API used: `POST /api/auth`, `GET /api/stats/summary`, `GET` and `POST /api/dns/blocking` (header `sid`).
+- Code map and conventions: see [AGENTS.md](AGENTS.md).

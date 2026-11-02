@@ -1,0 +1,5 @@
+# PiHoleBar
+> macOS menu bar app that shows Pi-hole v6 status, stats and lets you pause blocking.
+
+- [README](https://github.com/Griff2325/pihole-menubar/blob/main/README.md): install (brew cask or zip), usage, screenshots
+- [AGENTS.md](https://github.com/Griff2325/pihole-menubar/blob/main/AGENTS.md): build, code map, conventions
