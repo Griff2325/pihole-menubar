@@ -8,7 +8,7 @@ struct PiHoleBarApp: App {
         MenuBarExtra {
             PanelView().environmentObject(model)
         } label: {
-            Image(systemName: model.iconName)
+            Text(model.menuTitle).opacity(model.isBlocking ? 1 : 0.4)
         }
         .menuBarExtraStyle(.window)
     }
