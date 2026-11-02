@@ -2,7 +2,7 @@
 
 A tiny macOS menu bar app for [Pi-hole](https://pi-hole.net) v6. See at a glance whether blocking is on, view today's stats, pause blocking for a few minutes, and jump to the dashboard.
 
-- A little pie (Pi, get it) in the menu bar: bright = blocking on, dimmed = blocking off, warning sign = can't reach Pi-hole.
+- A little outline pie (Pi, get it) in the menu bar: solid = blocking on, faded = blocking off, warning triangle = can't reach Pi-hole.
 - Click it for queries today, blocked count and percent, blocklist size, and active clients.
 - **Disable blocking…** for 5 min, 30 min, or until you turn it back on.
 - **Open Dashboard** opens `http://<your-pi>/admin`.

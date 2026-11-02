@@ -26,16 +26,6 @@ final class Model: ObservableObject {
         }
     }
 
-    /// A little pie. Dimmed when blocking is off, warning sign when unreachable.
-    var menuTitle: String {
-        switch status {
-        case .on, .off: return "\u{1F967}"
-        case .offline, .unconfigured, .loading: return "\u{26A0}\u{FE0F}"
-        }
-    }
-
-    var isBlocking: Bool { if case .on = status { return true } else { return false } }
-
     func saveSettings(host: String, password: String) {
         self.host = host.trimmingCharacters(in: .whitespaces)
         self.password = password

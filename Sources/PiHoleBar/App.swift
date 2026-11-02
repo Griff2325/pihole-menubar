@@ -8,7 +8,11 @@ struct PiHoleBarApp: App {
         MenuBarExtra {
             PanelView().environmentObject(model)
         } label: {
-            Text(model.menuTitle).opacity(model.isBlocking ? 1 : 0.4)
+            switch model.status {
+            case .on: Image(nsImage: PieIcon.make(dimmed: false))
+            case .off: Image(nsImage: PieIcon.make(dimmed: true))
+            default: Image(systemName: "exclamationmark.triangle")
+            }
         }
         .menuBarExtraStyle(.window)
     }
