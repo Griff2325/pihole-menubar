@@ -8,6 +8,10 @@ A tiny macOS menu bar app for [Pi-hole](https://pi-hole.net) v6. See at a glance
 - **Open Dashboard** opens `http://<your-pi>/admin`.
 - Refreshes every 10 seconds. The admin password is kept in your macOS Keychain.
 
+<p align="center">
+<img src="docs/screenshot.png" width="420" alt="PiHoleBar running in the macOS menu bar">
+</p>
+
 <p>
 <img src="docs/popover-on-light.png" width="300" alt="Popover with blocking on">
 <img src="docs/popover-off-dark.png" width="300" alt="Popover with blocking paused, dark mode">
